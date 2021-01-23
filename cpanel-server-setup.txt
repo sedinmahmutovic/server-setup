@@ -8,7 +8,7 @@ swap = 8 GB
 
 yum -y install git 
 cd /root
-git clone https://github.com/serverok/server-setup/
+git clone https://github.com/sedinmahmutovic/server-setup/
 cd ~/server-setup
 ./centos/basic.sh
 
@@ -65,7 +65,7 @@ System PHP-FPM Status = OFF
 
 bash install/update-php-ini.sh
 
-curl -sL https://gist.github.com/serverok/8fbcbda5f8fb578cf4a9a5ac5667d1da/raw > /var/cpanel/killproc.conf
+curl -sL https://gist.github.com/sedinmahmutovic/8fbcbda5f8fb578cf4a9a5ac5667d1da/raw > /var/cpanel/killproc.conf
 cat /var/cpanel/killproc.conf
 
 /root/server-setup/csf-install.sh
@@ -73,7 +73,7 @@ cat /var/cpanel/killproc.conf
 /root/server-setup/maldet-install.sh
 
 sed -i 's/email_alert="0"/email_alert="1"/g' /usr/local/maldetect/conf.maldet
-sed -i 's/email_addr="you@domain.com"/email_addr="admin@serverok.in"/g' /usr/local/maldetect/conf.maldet
+sed -i 's/email_addr="you@domain.com"/email_addr="xmexpi@gmail.com"/g' /usr/local/maldetect/conf.maldet
 
 # Cpanel default page for HostOnNet servers ONLY.
 # ONLY DO THIS AFTER ALL SITES MOVED.
@@ -83,8 +83,8 @@ sed -i 's/email_addr="you@domain.com"/email_addr="admin@serverok.in"/g' /usr/loc
 mkdir -p /root/cpanel3-skel/public_html/
 cp /root/server-setup/data/cpanel3-skel/index.html  /root/cpanel3-skel/public_html/index.html
 
-/bin/sed -i "s/LF_ALERT_TO\s*=.*$/LF_ALERT_TO = \"admin@serverok.in\"/g" /etc/csf/csf.conf
-/bin/sed -i "s/LF_ALERT_TO\s*=.*$/LF_ALERT_TO = \"billing@hostonnet.com\"/g" /etc/csf/csf.conf
+/bin/sed -i "s/LF_ALERT_TO\s*=.*$/LF_ALERT_TO = \"xmexpi@gmail.com\"/g" /etc/csf/csf.conf
+/bin/sed -i "s/LF_ALERT_TO\s*=.*$/LF_ALERT_TO = \"xmexpi@gmail.com\"/g" /etc/csf/csf.conf
 
 cat /var/cpanel/backups/config
 

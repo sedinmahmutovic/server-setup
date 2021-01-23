@@ -13,8 +13,8 @@ echo "Installing CageFS"
 yum -y install cagefs lvemanager
 /usr/sbin/cagefsctl --init
 
-wget https://raw.githubusercontent.com/serverok/server-setup/master/data/cagefs_git.cfg -O /etc/cagefs/conf.d/git.cfg
-wget https://raw.githubusercontent.com/serverok/server-setup/master/data/cagefs_vshare.cfg -O /etc/cagefs/conf.d/vshare.cfg
+wget https://raw.githubusercontent.com/sedinmahmutovic/server-setup/master/data/cagefs_git.cfg -O /etc/cagefs/conf.d/git.cfg
+wget https://raw.githubusercontent.com/sedinmahmutovic/server-setup/master/data/cagefs_vshare.cfg -O /etc/cagefs/conf.d/vshare.cfg
 
 /usr/sbin/cagefsctl --enable-all
 

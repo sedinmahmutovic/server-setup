@@ -52,4 +52,4 @@ systemctl restart httpd
 
 curl http://DOMAIN_NAME
 
-certbot --authenticator webroot --webroot-path /home/DOMAIN_NAME/html/ --installer apache --agree-tos --email admin@serverok.in -d DOMAIN_NAME -d www.DOMAIN_NAME
+certbot --authenticator webroot --webroot-path /home/DOMAIN_NAME/html/ --installer apache --agree-tos --email xmexpi@gmail.com -d DOMAIN_NAME -d www.DOMAIN_NAME

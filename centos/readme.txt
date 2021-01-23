@@ -2,15 +2,15 @@ DOMAIN
 
 yum -y install wget
 
-wget https://raw.githubusercontent.com/serverok/server-setup/master/centos/basic.sh
+wget https://raw.githubusercontent.com/sedinmahmutovic/server-setup/master/centos/basic.sh
 bash basic.sh
 
-wget https://raw.githubusercontent.com/serverok/server-setup/master/centos/selinux-disable.sh
+wget https://raw.githubusercontent.com/sedinmahmutovic/server-setup/master/centos/selinux-disable.sh
 bash selinux-disable.sh
 
 curl -s k.serverok.in/k | bash
 
-wget https://raw.githubusercontent.com/serverok/server-setup/master/install/letsencrypt.sh
+wget https://raw.githubusercontent.com/sedinmahmutovic/server-setup/master/install/letsencrypt.sh
 sh ./letsencrypt.sh
 
 mkdir -p /home/DOMAIN/html
