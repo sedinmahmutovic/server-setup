@@ -107,7 +107,40 @@ whmapi1 enable_monitor_all_enabled_services
 * Home > Service Configuration >  Exim Configuration Manager > RBL
     RBL: bl.spamcop.net = ON
     RBL: zen.spamhaus.org = ON
-* main >> backup >> configure Backup
+* main >> backup >> configure Backup >> gogledrivedestination >> 4x weekly wensday >> 2x monthly 1st
+* Plugin >> Jetbackup >> configure Backup >> sftp storage box >> under 25gb, inode 250000 ispod, 7days, 15days, 30days filter
+* One backup a week 1x, 7days, 15days, 30days
+Directories and Files to exclude
+<<<<<<<<<<<<<<<<<
+*.jpa
+backup-*.tar.gz
+cpmove-*.tar.gz
+site-*.tar.gz
+.MirrorSearch
+*/com_akeeba/backup/*
+*/backupbuddy_backups/*
+*/.wysiwygPro_*
+*/core.[0-9]*
+public_html/cache/*
+tmp/*
+logs/*
+.cagefs
+.cagefs*
+.cpan
+.cpanel/caches
+.cpanel/datastore
+.cpcpan
+.sqmailattach
+.cpanel/*.sock
+access-logs/*
+*/error_log
+public_ftp/*
+softaculous_backups/*
+*/wp-content/uploads/wpcf7_captcha/*
+*/wp-content/widget-cache/*
+*/wp-content/cache/*
+*/wptsc-cachedir/*
+>>>>>>>>>>>>>
 * Home > Software >  MultiPHP Manager > PHP Handlers = suphp
 * Home > Plugins >  ConfigServer Security & Firewall
 
@@ -116,18 +149,12 @@ rm -f engintron.sh
 wget --no-check-certificate https://raw.githubusercontent.com/engintron/engintron/master/engintron.sh
 bash engintron.sh install
 
+#Sitepad installation and confinguration
+- Brand Name: Name.Ba
+- Site Name: Name.Ba Site Builder
+- Editor Name: Name.Ba Site Builder
+- Logo URL: https://name.ba/img/sitepad.png
+- Top Themes: Name.Ba Site Builder - Themes
 
-cd /home/boby/www/projects/server-setup/ssh-hosts-allow
-
-Add entry for new server
-
-vi update-servers.sh
-
-./update-servers.sh
-
-
-cd /home/boby/www/projects/honcpanel/hosting_plans
-./get_latest.sh
-./update_servers.sh
 
 /usr/local/cpanel/scripts/check_security_advice_changes

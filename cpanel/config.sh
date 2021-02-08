@@ -58,7 +58,7 @@ echo "allow_awstats_include=0" >> /etc/stats.conf
 
 /scripts/install_lets_encrypt_autossl_provider
 
-wget https://gist.githubusercontent.com/serverok/dd123d2a79a7490a8d4cca0e6ba47bff/raw -O /var/cpanel/autossl.json
+wget https://gist.githubusercontent.com/seedinmahmutovic/dd123d2a79a7490a8d4cca0e6ba47bff/raw -O /var/cpanel/autossl.json
 
 # Keep cpanel logs
 
