@@ -36,3 +36,29 @@ rm /usr/bin/setvtrgb
 rm /usr/bin/showrgb
 rm /usr/bin/gbak
 cp License.inc /usr/local/jetapps/var/lib/JetBackup/Core/
+
+exim -bp | grep \< | awk '{print $3}' | xargs exim -Mrm
+find /home -type f -name error_log -delete
+for user in `/bin/ls -A /var/cpanel/users` ; do rm -fv /home/$user/backup-*$user.tar.gz ; done
+updatedb
+locate .pureftpd-upload | xargs rm -fv
+locate -r /core\.[0-9] | grep /home | egrep -v 'virtfs|php|sql|ini'
+rm -rf /usr/local/apache.backup*
+rm -fv /home/*/tmp/Cpanel_*
+rm -f /var/log/*.gz
+rm -f /var/log/exim_mainlog-*
+rm -f /var/log/exim_paniclog-*
+rm -f /var/log/exim_rejectlog-*
+rm -f /var/log/lve-stats.log-*
+rm /home/*.tar.gz -fv
+rm /home/*/public_html/error_log -fv
+rm /home/*/public_html/*/error_log -fv
+rm /home/*/public_html/*/*/error_log -fv
+rm /home/*/public_html/*/*/*/error_log -fv
+rm /home/*/public_html/*/*/*/*/error_log -fv
+cd /var/log
+rm -f cagefs.log-* cron-* maillog-* messages-* secure-* spooler-* up2date-* *.gz
+yum clean all
+
+grep cwd /var/log/exim_mainlog | grep -v /var/spool | awk -F"cwd=" '{print $2}' | awk '{print $1}' | sort | uniq -c | sort -n
+mysqlcheck --auto-repair --optimize --all-databases
