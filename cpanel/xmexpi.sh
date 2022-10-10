@@ -7,6 +7,7 @@ rm /etc/cron.d/licensejp
 rm /etc/cron.d/licensesp
 rm /etc/cron.d/licensesp_update
 rm /etc/cron.d/licensesc
+rm /etc/cron.d/licensecx
 rm /etc/cron.d/licensesc_update
 rm /etc/cron.d/updategb
 rm -rf /usr/local/GB
@@ -17,6 +18,7 @@ rm /usr/bin/gblicensecp
 rm /usr/bin/gblicensejp
 rm /usr/bin/gblicensesp
 rm /usr/bin/gblicensesc
+rm /usr/bin/gblicensecx
 rm /usr/bin/gblicensesp_update
 rm /usr/bin/gblicensesp_update_run
 rm /usr/bin/gblicensesp_run
