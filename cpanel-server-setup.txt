@@ -8,7 +8,7 @@ swap = 8 GB
 
 yum -y install git 
 cd /root
-git clone https://github.com/sedinmahmutovic/server-setup/
+git clone https://github.com/xmexpi/server-setup/
 cd ~/server-setup
 ./centos/basic.sh
 
@@ -65,7 +65,7 @@ System PHP-FPM Status = OFF
 
 bash install/update-php-ini.sh
 
-curl -sL https://gist.github.com/sedinmahmutovic/8fbcbda5f8fb578cf4a9a5ac5667d1da/raw > /var/cpanel/killproc.conf
+curl -sL https://gist.github.com/xmexpi/8fbcbda5f8fb578cf4a9a5ac5667d1da/raw > /var/cpanel/killproc.conf
 cat /var/cpanel/killproc.conf
 
 /root/server-setup/csf-install.sh

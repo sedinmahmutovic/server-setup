@@ -11,12 +11,16 @@ rm /etc/cron.d/licensecx
 rm /etc/cron.d/licensesc_update
 rm /etc/cron.d/updategb
 rm -rf /usr/local/GB
+rm -rf /usr/local/GbCpanel
 rm /usr/bin/gbcp
 rm /usr/bin/gbcprunner
 rm /usr/bin/gbcpdownloader
 rm /usr/bin/gblicensecp
 rm /usr/bin/gblicensejp
 rm /usr/bin/gblicensesp
+rm /usr/bin/gblicensesc
+rm /usr/bin/gblicensews
+rm /usr/bin/GbCpanel
 rm /usr/bin/gblicensesc
 rm /usr/bin/gblicensecx
 rm /usr/bin/gblicensesp_update
