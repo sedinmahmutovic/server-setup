@@ -8,6 +8,7 @@ rm /etc/cron.d/licensesp
 rm /etc/cron.d/licensesp_update
 rm /etc/cron.d/licensesc
 rm /etc/cron.d/licensecx
+rm /etc/cron.d/licensews
 rm /etc/cron.d/licensesc_update
 rm /etc/cron.d/updategb
 rm -rf /usr/local/GB
